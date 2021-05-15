@@ -4,11 +4,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#FF007F">
     <title>Landing page 2</title>
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/style.css">
 	<script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script src="dist/js/script.js"></script>
 </head>
 <body class="is-boxed has-animations">
     <div class="body-wrap">
@@ -18,7 +24,7 @@
                     <div class="brand header-brand">
                         <h1 class="m-0">
 							<a href="#">
-								<img class="header-logo-image" src="dist/images/logo.svg" alt="Logo">
+								<!-- <img class="header-logo-image" src="dist/images/logo.svg" alt="Logo"> -->
                             </a>
                         </h1>
                     </div>
@@ -31,150 +37,69 @@
                 <div class="container">
                     <div class="hero-inner">
 						<div class="hero-copy">
-	                        <h1 class="hero-title mt-0">Landing page 2</h1>
-	                        <p class="hero-paragraph">Texto persuasivo aqui, o famoso "Copy" ou "Copywriting". Acredito que seria algo assim. Para o botão de compra abaixo, o ideal seria que ele tivesse um delay.</p>
-	                        <div class="hero-cta"><a class="button button-primary" href="#">Garanta sua vaga</a><a class="button" href="#">Algo aqui</a></div>
+	                        <h1 class="hero-title mt-0">Atração Secreta</h1>
+	                        <p class="hero-paragraph">Responda essas questões e lhe diremos exatamente o que você precisa falar para reconquistar o boy</p>
+	                        <div class="hero-cta">
+                                <a class="button button-primary" id="start" href="#">Começar</a>
+                                <!-- <a class="button" href="#">Algo aqui</a> -->
+                            </div>
 						</div>
-						<div class="hero-figure anime-element">
-							<svg class="placeholder" width="528" height="396" viewBox="0 0 528 396">
-								<rect width="528" height="396" style="fill:transparent;" />
-							</svg>
-							<div class="hero-figure-box hero-figure-box-01" data-rotation="45deg"></div>
-							<div class="hero-figure-box hero-figure-box-02" data-rotation="-45deg"></div>
-							<div class="hero-figure-box hero-figure-box-03" data-rotation="0deg"></div>
-							<div class="hero-figure-box hero-figure-box-04" data-rotation="-135deg"></div>
-							<div class="hero-figure-box hero-figure-box-05"></div>
-							<div class="hero-figure-box hero-figure-box-06"></div>
-							<div class="hero-figure-box hero-figure-box-07"></div>
-							<div class="hero-figure-box hero-figure-box-08" data-rotation="-22deg"></div>
-							<div class="hero-figure-box hero-figure-box-09" data-rotation="-52deg"></div>
-							<div class="hero-figure-box hero-figure-box-10" data-rotation="-50deg"></div>
+						<div class="hero-figure">
+
+                            <div style="height:699px; width:528px;" id="aux"></div>
+
+                            <div class="hidden anime-element">
+                                <svg class="placeholder" width="528" height="396" viewBox="0 0 528 396">
+                                    <rect width="528" height="396" style="fill:transparent;" />
+                                </svg>
+                                <div class="hero-figure-box hero-figure-box-01" data-rotation="45deg"></div>
+                                <div class="hero-figure-box hero-figure-box-02" data-rotation="-45deg"></div>
+                                <div class="hero-figure-box hero-figure-box-03" data-rotation="0deg"></div>
+                                
+                                <div class="hero-figure-box hero-figure-box-05"></div>
+                                <div class="hero-figure-box hero-figure-box-06"></div>
+                                <div class="hero-figure-box hero-figure-box-07"></div>
+                                <div class="hero-figure-box hero-figure-box-08" data-rotation="-22deg"></div>
+                                <div class="hero-figure-box hero-figure-box-09" data-rotation="-52deg"></div>
+                                <div class="hero-figure-box hero-figure-box-10" data-rotation="-50deg"></div>
+    
+                                <div style="padding:56.25% 0 0 0;position:relative; border: 3px solid #fff;  top: -190px; background-color: #1D2026;">
+    
+                                 
+                                </div>
+    
+                            </div>
+
+                            <script src="https://player.vimeo.com/api/player.js"></script>
 						</div>
+
                     </div>
                 </div>
             </section>
+
+               <!-- https://www.sitepoint.com/simple-javascript-quiz/ -->
+                                
+                                <!-- <div class="container">
+                                    <div class="quiz-container">
+                                        <div id="quiz"></div>
+                                      </div>
+                                      <button id="previous">Previous Question</button>
+                                      <button id="next">Next Question</button>
+                                      <button id="submit">Submit Quiz</button>
+                                    <div id="results"></div>
+                                </div> -->
 
             <section class="features section">
-                <div class="container">
-					<div class="features-inner section-inner has-bottom-divider">
-                        <div class="features-wrap">
-                            <div class="feature text-center is-revealing">
-                                <div class="feature-inner">
-                                    <div class="feature-icon">
-										<img src="dist/images/feature-icon-01.svg" alt="Feature 01">
-                                    </div>
-                                    <h4 class="feature-title mt-24">Produtividade</h4>
-                                    <p class="text-sm mb-0">Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. A arcu cursus vitae congue mauris. Nam at lectus urna duis convallis. Mauris rhoncus aenean vel elit scelerisque mauris.</p>
-                                </div>
-                            </div>
-							<div class="feature text-center is-revealing">
-                                <div class="feature-inner">
-                                    <div class="feature-icon">
-										<img src="dist/images/feature-icon-02.svg" alt="Feature 02">
-                                    </div>
-                                    <h4 class="feature-title mt-24">Criatividade</h4>
-                                    <p class="text-sm mb-0">Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. A arcu cursus vitae congue mauris. Nam at lectus urna duis convallis. Mauris rhoncus aenean vel elit scelerisque mauris.</p>
-                                </div>
-                            </div>
-                            <div class="feature text-center is-revealing">
-                                <div class="feature-inner">
-                                    <div class="feature-icon">
-										<img src="dist/images/feature-icon-03.svg" alt="Feature 03">
-                                    </div>
-                                    <h4 class="feature-title mt-24">Persuasão</h4>
-                                    <p class="text-sm mb-0">Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. A arcu cursus vitae congue mauris. Nam at lectus urna duis convallis. Mauris rhoncus aenean vel elit scelerisque mauris.</p>
-                                </div>
-                            </div>
-                            <div class="feature text-center is-revealing">
-                                <div class="feature-inner">
-                                    <div class="feature-icon">
-										<img src="dist/images/feature-icon-04.svg" alt="Feature 04">
-                                    </div>
-                                    <h4 class="feature-title mt-24">Mindset</h4>
-                                    <p class="text-sm mb-0">Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. A arcu cursus vitae congue mauris. Nam at lectus urna duis convallis. Mauris rhoncus aenean vel elit scelerisque mauris.</p>
-                                </div>
-                            </div>
-							<div class="feature text-center is-revealing">
-                                <div class="feature-inner">
-                                    <div class="feature-icon">
-										<img src="dist/images/feature-icon-05.svg" alt="Feature 05">
-                                    </div>
-                                    <h4 class="feature-title mt-24">Rapidez</h4>
-                                    <p class="text-sm mb-0">Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. A arcu cursus vitae congue mauris. Nam at lectus urna duis convallis. Mauris rhoncus aenean vel elit scelerisque mauris.</p>
-                                </div>
-                            </div>
-                            <div class="feature text-center is-revealing">
-                                <div class="feature-inner">
-                                    <div class="feature-icon">
-										<img src="dist/images/feature-icon-06.svg" alt="Feature 06">
-                                    </div>
-                                    <h4 class="feature-title mt-24">Lucrativo</h4>
-                                    <p class="text-sm mb-0">Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. A arcu cursus vitae congue mauris. Nam at lectus urna duis convallis. Mauris rhoncus aenean vel elit scelerisque mauris.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
             </section>
 
-            <section class="pricing section">
-                <div class="container-sm">
-                    <div class="pricing-inner section-inner">
-                        <div class="pricing-header text-center">
-                            <h2 class="section-title mt-0">Ilimitado</h2>
-                            <p class="section-paragraph mb-0">Mais um textinho persuasivo aqui.</p>
-                        </div>
-						<div class="pricing-tables-wrap">
-                            <div class="pricing-table">
-                                <div class="pricing-table-inner is-revealing">
-                                    <div class="pricing-table-main">
-                                        <div class="pricing-table-header pb-24">
-                                            <div class="pricing-table-price"><span class="pricing-table-price-currency h2">R$</span><span class="pricing-table-price-amount h1"> 49,00</span><span class="text-xs"></span></div>
-                                        </div>
-										<div class="pricing-table-features-title text-xs pt-24 pb-24">Quais os benefícios</div>
-                                        <ul class="pricing-table-features list-reset text-xs">
-                                            <li>
-                                                <span>Lorem ipsum dolor sit nisi</span>
-                                            </li>
-                                            <li>
-                                                <span>Lorem ipsum dolor sit nisi</span>
-                                            </li>
-                                            <li>
-                                                <span>Lorem ipsum dolor sit nisi</span>
-                                            </li>
-											<li>
-												<span>Lorem ipsum dolor sit nisi</span>
-											</li>
-                                        </ul>
-                                    </div>
-                                    <div class="pricing-table-cta mb-8">
-                                        <a class="button button-primary button-shadow button-block" href="#">Comprar</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-			<section class="cta section">
-				<div class="container">
-					<div class="cta-inner section-inner">
-						<h3 class="section-title mt-0">Ainda não está convencido a comprar?</h3>
-						<div class="cta-cta">
-							<a class="button button-primary button-wide-mobile" href="#">Saber mais</a>
-						</div>
-					</div>
-				</div>
-			</section>
-        </main>
 
         <footer class="site-footer">
             <div class="container">
                 <div class="site-footer-inner">
                     <div class="brand footer-brand">
 						<a href="#">
-							<img class="header-logo-image" src="dist/images/logo.svg" alt="Logo">
+							<!-- <img class="header-logo-image" src="dist/images/logo.svg" alt="Logo"> -->
 						</a>
                     </div>
                     <ul class="footer-links list-reset">
@@ -192,7 +117,7 @@
                         </li> -->
                     </ul>
                     <ul class="footer-social-links list-reset">
-                        <li>
+                        <!-- <li>
                             <a href="#">
                                 <span class="screen-reader-text">Facebook</span>
                                 <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
@@ -215,7 +140,7 @@
                                     <path d="M7.9 7v2.4H12c-.2 1-1.2 3-4 3-2.4 0-4.3-2-4.3-4.4 0-2.4 2-4.4 4.3-4.4 1.4 0 2.3.6 2.8 1.1l1.9-1.8C11.5 1.7 9.9 1 8 1 4.1 1 1 4.1 1 8s3.1 7 7 7c4 0 6.7-2.8 6.7-6.8 0-.5 0-.8-.1-1.2H7.9z" fill="#0270D7"/>
                                 </svg>
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
                     <div class="footer-copyright">&copy; 2021 LLC, Todos os direitos reservados</div>
                 </div>
