@@ -1707,8 +1707,9 @@ label {
 .pricing-table {
 	position: relative;
 	padding: 12px;
-	width: 368px;
-	max-width: 368px;
+	width: 550px;
+	max-width: 550px;
+	height: 580px;
 	flex-grow: 1
 }
 
