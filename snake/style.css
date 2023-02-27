@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple');
+
+body {
+  height: 95vh;
+  width: 95vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* color: rgb(244, 58, 89); */
+  color: pink;
+  font-family: 'Rancho', serif;
+  font-size: 30px;
+  background: rgb(31, 33, 32);
+}
+
+h1 {
+  margin-bottom: 0px;
+}
