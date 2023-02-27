@@ -81,6 +81,7 @@ class SnakeGame {
     if(this.score > this.highscore) {
       localStorage.setItem('highscore', this.score)
       document.getElementById('highscore').innerHTML = this.score
+      this.score = 0
     }
   }
 
