@@ -1,3 +1,4 @@
+
 class SnakeGame {
   currentObstacleX = -1
   speed = 1
@@ -16,6 +17,12 @@ class SnakeGame {
   score = 0
   highscore = 0
   context = document.getElementById('game').getContext('2d')
+
+  constructor() {
+    let highscore = localStorage.getItem('highscore')
+
+    document.getElementById('highscore').innerHTML = highscore ? highscore : 0
+  }
 
   drawMap(context) {
     context.fillStyle = 'pink'
@@ -64,13 +71,28 @@ class SnakeGame {
     if(this.positionX == this.appleX && this.positionY == this.appleY ) {
       this.tail++
       this.drawRandomApple()
-      this.obstacleX = Math.floor(Math.random() * this.lengthPart)
-      this.obstacleY = Math.floor(Math.random() * this.lengthPart)
+      this.setScore()
+      // this.obstacleX = Math.floor(Math.random() * this.lengthPart)
+      // this.obstacleY = Math.floor(Math.random() * this.lengthPart)
     }
   }
 
+  setHighScore() {
+    if(this.score > this.highscore) {
+      localStorage.setItem('highscore', this.score)
+      document.getElementById('highscore').innerHTML = this.score
+    }
+  }
+
+  setScore() {
+    this.score++
+    console.log(this.score);
+    document.getElementById('score').innerHTML = this.score
+  }
+
   verifyGameOver(trailX, trailY) {
-    if((this.positionX == trailX && this.positionY == trailY && this.tail > 5) || (this.positionX >= this.obstacleX && this.positionX < this.obstacleX + 2 && this.positionY >= this.obstacleY && this.positionY < this.obstacleY + 2)) {
+    if(this.positionX == trailX && this.positionY == trailY && this.tail > 5) {
+    // if((this.positionX == trailX && this.positionY == trailY && this.tail > 5) || (this.positionX >= this.obstacleX && this.positionX < this.obstacleX + 2 && this.positionY >= this.obstacleY && this.positionY < this.obstacleY + 2)) {
       if(this.speedX > 0) {
         this.positionX--
       } else if (this.speedX < 0) {
@@ -83,6 +105,7 @@ class SnakeGame {
       this.tail = 5
       this.speedX = 0
       this.speedY = 0
+      this.setHighScore()
       console.log('Game over!')
     }
   }
@@ -109,12 +132,12 @@ class SnakeGame {
     this.changeDirection()
     this.drawMap(this.context)
     this.drawApple(this.context)
-    this.drawObstacles(this.context)
+    // this.drawObstacles(this.context)
     this.drawSnake(this.context)
   }
 
   start() {
-    setInterval(this.init.bind(this), 80)
+    setInterval(this.init.bind(this), 60)
     document.addEventListener('keydown', (event) => {
       switch (event.code) {
         case 'ArrowDown':
