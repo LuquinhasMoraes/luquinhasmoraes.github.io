@@ -20,7 +20,6 @@ class SnakeGame {
 
   constructor() {
     let highscore = localStorage.getItem('highscore')
-
     document.getElementById('highscore').innerHTML = highscore ? highscore : 0
   }
 
@@ -137,32 +136,53 @@ class SnakeGame {
     this.drawSnake(this.context)
   }
 
+  moveDown () {
+    this.speedX = 0
+    this.speedY = this.speed
+  }
+
+  moveUp () {
+    this.speedX = 0
+    this.speedY = -this.speed
+  }
+
+  moveRight () {
+    this.speedX = this.speed
+    this.speedY = 0
+  }
+
+  moveLeft () {
+    this.speedX = -this.speed
+    this.speedY = 0
+  }
+  
+  playerIA() {
+    this.moveRight()
+  }
+
   start() {
     setInterval(this.init.bind(this), 60)
+    this.playerIA()
     document.addEventListener('keydown', (event) => {
       switch (event.code) {
         case 'ArrowDown':
           if(this.speedY == 0) {
-            this.speedX = 0
-            this.speedY = this.speed
+            this.moveDown()
           }
           break;
         case 'ArrowUp':
             if(this.speedY == 0) {
-              this.speedX = 0
-              this.speedY = -this.speed
+              this.moveUp()
             }
             break;
         case 'ArrowRight':
           if(this.speedX == 0) {
-            this.speedX = this.speed
-            this.speedY = 0
+            this.moveRight()
           }
           break;
         case 'ArrowLeft':
           if(this.speedX == 0) {
-            this.speedX = -this.speed
-            this.speedY = 0
+            this.moveLeft()
           }
           break;
         default:
