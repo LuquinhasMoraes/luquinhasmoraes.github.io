@@ -402,7 +402,7 @@ const toggleSound = () => {
       el.blop.volume = 0.0;
       el.sound.classList.add("sound--off");
     } else {
-      // music.play();
+      music.play();
       el.blup.volume = volume;
       el.blop.volume = volume;
       el.sound.classList.remove("sound--off");

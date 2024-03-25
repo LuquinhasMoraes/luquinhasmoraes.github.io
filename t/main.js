@@ -19,21 +19,10 @@ let question = document.getElementById('question')
 let btn = document.getElementById('btn')
 
 function ansiosa() {
-    question.textContent = 'Eu também! \n volta aqui quando faltar 5 min, ta?'
+    question.textContent = 'Eu também, mozin! volta aqui depois ta? rs'
     btn.style.display = 'none'
 }
 
-function tocar() {
-  var sound = new Howl({
-    src: ['music.mp3'],
-    html5: true
-  });
-  console.log(sound);
-  sound.play();
-
-    // let music = document.querySelector('.music');
-    // music.play();
-}
 
 
 animation.style.display = 'none'
@@ -75,6 +64,7 @@ const id = setInterval(() => {
     let time = document.getElementById("time")
 
     let currentDate = new Date()
+
     
     
     let timespan = targetDate - currentDate;
@@ -90,13 +80,6 @@ const id = setInterval(() => {
     let fulltime = hh + mm + ss;
 
     console.log(Number(fulltime));
-
-    
-    if(fulltime <= 20000) {
-        console.log('caiu');
-        let bt = `<button id="btn" onClick="tocar()" style="width: 200px; padding: 10px; margin-top: 10px; align-self: center;"><b>Clique aqui, mozin!</b></button>`;
-        document.getElementById('sup').innerHTML = bt;
-    }
 
     if(fulltime <= 0 || hh > 3) {
         
