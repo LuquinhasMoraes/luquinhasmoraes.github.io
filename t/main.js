@@ -83,7 +83,7 @@ const id = setInterval(() => {
 
     console.log(Number(fulltime));
 
-    if(fulltime >= 0 || hh > 3) {
+    if(fulltime <= 0 || hh > 3) {
         
 
         clearInterval(id);
