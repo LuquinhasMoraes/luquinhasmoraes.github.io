@@ -43,6 +43,8 @@
     }
   </style>
 </head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js" integrity="sha512-xi/RZRIF/S0hJ+yJJYuZ5yk6/8pCiRlEXZzoguSMl+vk2i3m6UjUO/WcZ11blRL/O+rnj94JRGwt/CHbc9+6EA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
 <body style="width: 100%; display: flex; flex-direction: column;">
 
@@ -56,6 +58,9 @@
       <button id="btn" onClick="ansiosa()" style="width: 200px; padding: 10px; align-self: center;">Sim</button>
     </div>
   </div>
+
+  <div id="ubaplayer"></div>
+  
 
   <!-- partial:index.partial.html -->
   <div id="paloma" style="display: flex; width: 100%; align-self: center; justify-content: center; color: white; font-size: 45px;  margin-bottom: 20px;">
@@ -107,7 +112,7 @@
   </audio>
   <div class="sound">sound</div>
   
-  
+ 
 
   <!-- partial -->
   <script src='https://cdn.jsdelivr.net/mojs/latest/mo.min.js'></script>

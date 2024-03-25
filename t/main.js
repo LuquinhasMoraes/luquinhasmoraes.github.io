@@ -24,9 +24,15 @@ function ansiosa() {
 }
 
 function tocar() {
-    
-    let music = document.querySelector('.music');
-    music.play();
+  var sound = new Howl({
+    src: ['music.mp3'],
+    html5: true
+  });
+  console.log(sound);
+  sound.play();
+
+    // let music = document.querySelector('.music');
+    // music.play();
 }
 
 
