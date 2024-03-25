@@ -14,12 +14,13 @@ targetDate.setMilliseconds(0);
 let animation = document.getElementById('animation')
 let paloma = document.getElementById('paloma')
 let happy = document.getElementById('happy')
+let audio = document.getElementById('audio')
 
 let question = document.getElementById('question')
 let btn = document.getElementById('btn')
 
 function ansiosa() {
-    question.textContent = 'Eu também, mozin! volta aqui depois ta? rs'
+    question.textContent = 'Eu também, mozin! volta aqui depois ta?'
     btn.style.display = 'none'
 }
 
@@ -28,6 +29,7 @@ function ansiosa() {
 animation.style.display = 'none'
 paloma.style.display = 'none'
 happy.style.display = 'none'
+audio.style.display = 'none'
 
 
 
@@ -81,7 +83,7 @@ const id = setInterval(() => {
 
     console.log(Number(fulltime));
 
-    if(fulltime <= 0 || hh > 3) {
+    if(fulltime >= 0 || hh > 3) {
         
 
         clearInterval(id);
@@ -101,6 +103,8 @@ const id = setInterval(() => {
         animation.style.display = 'flex'
         paloma.style.display = 'flex'
         happy.style.display = 'flex'
+        audio.style.display = 'flex'
+        
         
     }
     i++;

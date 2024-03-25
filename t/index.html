@@ -49,14 +49,17 @@
 <body style="width: 100%; display: flex; flex-direction: column;">
 
 
-
+          
 
   <div class="text-love" style="flex-direction: column; padding: 30px;">
     <h1 style="text-align: center;"> FALTAM <span id="time">00:00</span> </h1>   
     <div id="sup" style="color: white; display: flex; flex-direction: column;">
       <h1 id="question" style="text-align: center; padding: 10px; font-size: 20px;"> Está ansiosa? </h1>   
       <button id="btn" onClick="ansiosa()" style="width: 200px; padding: 10px; align-self: center;">Sim</button>
+      
     </div>
+    
+
   </div>
 
   <div id="ubaplayer"></div>
@@ -67,9 +70,15 @@
     <h1>PALOMA</h1>
   </div>
 
-  <div id="happy" style="display: flex; width: 100%; align-self: center; justify-content: center; color: white; font-size: 30px;  margin-bottom: 300px;">  
+  <div id="happy" style="display: flex; width: 100%; align-self: center; flex-direction: column; text-align: center; color: white; font-size: 30px; ">  
     <p>Feliz nosso dia - 25/03</p>
+    <p>Ouça nossa música</p>
   </div>
+  <audio id="audio" controls  style="margin-top: 20px; align-self: center;  margin-bottom: 300px;" >
+    <source src="music.mp3" type="audio/mpeg" media="(max-width: 480px)">
+    <source src="music.mp3" type="audio/mpeg" media="(max-width: 768px)">
+    <source src="music.mp3" type="audio/mpeg" media="(min-width: 769px)">
+  </audio>  
   
 
   <div class="container" id="animation">
