@@ -70,13 +70,16 @@ const id = setInterval(() => {
 
     time.textContent = diffDate;
 
-    let hh = Number(diffDate.slice(0,2));
-    let mm = Number(diffDate.slice(3,5));
-    let ss = Number(diffDate.slice(6,8));
+    let hh = diffDate.slice(0,2);
+    let mm = diffDate.slice(3,5);
+    let ss = diffDate.slice(6,8);
 
-    console.log(hh, mm, ss);
+    let fulltime = hh + mm + ss;
 
-    if((hh <= 2 && mm <= 15 && ss <= 0) || hh > 2) {
+    console.log(Number(fulltime));
+
+    if(fulltime <= 20143 || hh > 3) {
+        
 
         clearInterval(id);
         console.log('acabou');
